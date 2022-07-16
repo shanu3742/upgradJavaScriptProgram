@@ -4,6 +4,7 @@ const fs = require('fs');
 const server = http.createServer((req, res) => {
   if (req.url === '/home') {
     let data = fs.readFileSync('./files/welcome.txt');
+
     console.log(data);
     res.end(data.toString());
   } else {
